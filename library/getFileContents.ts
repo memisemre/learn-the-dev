@@ -1,7 +1,7 @@
 import { promises as fs } from 'fs';
 import path from 'path';
 
-export async function getFileContent(slugArray: string[]): Promise<string | null> {
+export async function getFileContents(slugArray: string[]): Promise<string | null> {
   const slugPath = slugArray.join('/');
   const filePath = path.join(process.cwd(), '_docs', `${slugPath}.mdx`);
 
